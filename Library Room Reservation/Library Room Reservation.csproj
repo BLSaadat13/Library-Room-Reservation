@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F98FA97-5C52-436A-81FE-E599B9562326}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Library_Room_Reservation</RootNamespace>
+    <AssemblyName>Library Room Reservation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeRoom.designer.cs">
+      <DependentUpon>ChangeRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="dsReservationReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReservationReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian.cs" />
+    <Compile Include="LibrarianCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarianCreate.Designer.cs">
+      <DependentUpon>LibrarianCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="librarianDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="librarianDashboard.Designer.cs">
+      <DependentUpon>librarianDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarianEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarianEditProfile.Designer.cs">
+      <DependentUpon>LibrarianEditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarianRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarianRequest.Designer.cs">
+      <DependentUpon>LibrarianRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="ReservationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationReport.Designer.cs">
+      <DependentUpon>ReservationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReserveRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReserveRoom.designer.cs">
+      <DependentUpon>ReserveRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Room.cs" />
+    <Compile Include="RoomReservationList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RoomReservationList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="userDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userDashboard.Designer.cs">
+      <DependentUpon>userDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userEditProfile.Designer.cs">
+      <DependentUpon>userEditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRequest.designer.cs">
+      <DependentUpon>ViewRequest.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangeRoom.resx">
+      <DependentUpon>ChangeRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianCreate.resx">
+      <DependentUpon>LibrarianCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="librarianDashboard.resx">
+      <DependentUpon>librarianDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianEditProfile.resx">
+      <DependentUpon>LibrarianEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianRequest.resx">
+      <DependentUpon>LibrarianRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReservationReport.resx">
+      <DependentUpon>ReservationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReserveRoom.resx">
+      <DependentUpon>ReserveRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomReservationList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RoomReservationList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userDashboard.resx">
+      <DependentUpon>userDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userEditProfile.resx">
+      <DependentUpon>userEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRequest.resx">
+      <DependentUpon>ViewRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="dsReservationReport.xsc">
+      <DependentUpon>dsReservationReport.xsd</DependentUpon>
+    </None>
+    <None Include="dsReservationReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReservationReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsReservationReport.xss">
+      <DependentUpon>dsReservationReport.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

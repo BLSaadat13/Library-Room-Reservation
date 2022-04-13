@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReservationReport" targetNamespace="http://tempuri.org/dsReservationReport.xsd" xmlns:mstns="http://tempuri.org/dsReservationReport.xsd" xmlns="http://tempuri.org/dsReservationReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DB_Library_Room_ReservationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_Library_Room_ReservationConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Library_Room_Reservation.Properties.Settings.GlobalReference.Default.DB_Library_Room_ReservationConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReservationReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReservationReport" msprop:Generator_UserDSName="dsReservationReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtReservation" msprop:Generator_TableClassName="dtReservationDataTable" msprop:Generator_TableVarName="tabledtReservation" msprop:Generator_TablePropName="dtReservation" msprop:Generator_RowDeletingName="dtReservationRowDeleting" msprop:Generator_RowChangingName="dtReservationRowChanging" msprop:Generator_RowEvHandlerName="dtReservationRowChangeEventHandler" msprop:Generator_RowDeletedName="dtReservationRowDeleted" msprop:Generator_UserTableName="dtReservation" msprop:Generator_RowChangedName="dtReservationRowChanged" msprop:Generator_RowEvArgName="dtReservationRowChangeEvent" msprop:Generator_RowClassName="dtReservationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STUDENTID" msprop:Generator_ColumnVarNameInTable="columnSTUDENTID" msprop:Generator_ColumnPropNameInRow="STUDENTID" msprop:Generator_ColumnPropNameInTable="STUDENTIDColumn" msprop:Generator_UserColumnName="STUDENTID" type="xs:string" minOccurs="0" />
+              <xs:element name="RoomID" msprop:Generator_ColumnVarNameInTable="columnRoomID" msprop:Generator_ColumnPropNameInRow="RoomID" msprop:Generator_ColumnPropNameInTable="RoomIDColumn" msprop:Generator_UserColumnName="RoomID" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
